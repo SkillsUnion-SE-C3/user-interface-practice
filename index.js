@@ -30,3 +30,103 @@ mushrooms = [
     description: "The oyster mushroom is one of the more commonly sought wild mushrooms, though it can also be cultivated on straw and other media. It has the bittersweet aroma of benzaldehyde (which is also characteristic of bitter almonds)."
   },
 ]
+
+// Navigation
+
+const menuButton = document.querySelector('.burger-menu')
+const expandedNav = document.querySelector('.expanded-nav')
+
+function toggleNav () {
+  if(expandedNav.style.display === "flex") {
+    expandedNav.style.display = "none"
+  } else {
+    expandedNav.style.display = "flex"
+  }
+}
+
+menuButton.addEventListener('click', toggleNav)
+
+
+//Slider
+
+const rightButton = document.querySelector('.right-button')
+const leftButton = document.querySelector('.left-button')
+const mushroomName = document.querySelector('.name')
+const mushroomImage = document.querySelector('.image')
+
+let currentMushroom = 0
+
+const updateSlide = function() {
+  mushroomName.innerText = mushrooms[currentMushroom].name
+  mushroomImage.src = mushrooms[currentMushroom].image
+}
+
+const moveRight = function () {
+  if (currentMushroom === 3) {
+    currentMushroom = 0 
+  } else {
+    currentMushroom ++
+  }
+
+  updateSlide()
+}
+
+const moveLeft = function () {
+  if (currentMushroom === 0) {
+    currentMushroom = 3 
+  } else {
+    currentMushroom --
+  }
+
+  updateSlide()
+}
+
+leftButton.addEventListener('click', moveLeft)
+rightButton.addEventListener('click', moveRight)
+
+updateSlide()
+
+//Lists
+
+const edibleList = document.querySelector('#edible')
+const poisonousList = document.querySelector('#poisonous')
+
+for (let i = 0; i<mushrooms.length; i++) {
+  const mushroom = mushrooms[i]
+
+  if (mushroom.edible) {
+    edibleList.innerHTML += `<li>${mushroom.name}</li>`
+  } else {
+    poisonousList.innerHTML += `<li>${mushroom.name}</li>`
+  }
+}
+
+
+//Accordion
+
+const accordion = document.querySelector('.accordion')
+
+const toggleDescription = function (index) {
+  description = document.querySelector(`#mushroom-${index}`)
+  if (description.style.display === "none") {
+    description.style.display = 'block'
+  } else {
+    description.style.display = 'none'
+  }
+}
+
+for(let i = 0; i < mushrooms.length; i++) {
+  const mushroom = mushrooms[i]
+
+  const accordionItem = document.createElement('div')
+  accordionItem.className = "accordion-item"
+  accordionItem.innerHTML = `
+    <h3>${mushroom.name}</h3>
+    <p style="display: none" id=mushroom-${i}>${mushroom.description}</p>
+  `
+  accordionItem.addEventListener(`click`, function () {
+    toggleDescription(i)
+  })
+
+  accordion.append(accordionItem)
+}
