@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript practice</title>
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <button class="burger-menu">
+      <img src="images/menu.png">
+    </button>
+    <div class="expanded-nav">
+      <a href="#slider">Slider</a>
+      <a href="#edible-or-poisonous">Edible or poisonous</a>
+      <a href="#more-info">More info</a>
+    </div>
+  </nav>
+  <div class="content">
+    <h1>Mushrooms</h1>
+
+    <section id="slider">
+      <div class="slide">
+        <img class="image" src="" alt="">
+        <h3 class="name"></h3>
+      </div>
+      <div class="control-buttons">
+        <button class="left-button">←</button>
+        <button class="right-button">→</button>
+      </div>
+    </section>
+
+    <section id="edible-or-poisonous">
+      <h2>Edible or poisonous</h2>
+      
+      <div class="lists">
+        <div>
+          <h3>Edible</h3>
+          <ul id="edible">
+          </ul>
+        </div> 
+        <div>
+          <h3>Poisonous</h3>
+          <ul id="poisonous"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="more-info">
+      <h2>More information</h2>
+      <div class="accordion"></div>
+    </section>
+  </div>
+</body>
+</html>
