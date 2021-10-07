@@ -25,7 +25,7 @@ We would like to make five UI elements work with the help of Javascript, please 
 	![Example user interaction with slider](examples/slider.gif "Example interaction with slider")
 
 3. Listing mushroom names
-	- We should be able to see 2 lists under the Edible or Poisonous section. 
+	- We should be able to see 2 lists under the Edible or poisonous section. 
 	- Each mushroom has an edible property which is a boolean, the lists should be created based on that.
 
 	![Lists](examples/lists.png "Lists")
