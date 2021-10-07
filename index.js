@@ -130,6 +130,8 @@ for(let i = 0; i < mushrooms.length; i++) {
 
   accordion.append(accordionItem)
 }
+
+//Add mushroom
 document.querySelector('#submit').addEventListener('click', () => {
   mushrooms.push({
     name: document.querySelector("#name-input").value,
