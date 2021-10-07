@@ -49,8 +49,8 @@ menuButton.addEventListener('click', toggleNav)
 
 //Slider
 
-const rightButton = document.querySelector('.right-button')
-const leftButton = document.querySelector('.left-button')
+const rightButton = document.querySelector('#right-button')
+const leftButton = document.querySelector('#left-button')
 const mushroomName = document.querySelector('.name')
 const mushroomImage = document.querySelector('.image')
 
@@ -62,7 +62,7 @@ const updateSlide = function() {
 }
 
 const moveRight = function () {
-  if (currentMushroom === 3) {
+  if (currentMushroom === mushrooms.length - 1) {
     currentMushroom = 0 
   } else {
     currentMushroom ++
@@ -73,8 +73,8 @@ const moveRight = function () {
 
 const moveLeft = function () {
   if (currentMushroom === 0) {
-    currentMushroom = 3 
-  } else {
+    currentMushroom = mushrooms.length -1 
+  } else {    
     currentMushroom --
   }
 
@@ -130,3 +130,11 @@ for(let i = 0; i < mushrooms.length; i++) {
 
   accordion.append(accordionItem)
 }
+document.querySelector('#submit').addEventListener('click', () => {
+  mushrooms.push({
+    name: document.querySelector("#name-input").value,
+    description: document.querySelector("#description-input").value,
+    edible: document.querySelector("#edible-input").checked,
+    image: document.querySelector("#image-input").value
+  })
+})

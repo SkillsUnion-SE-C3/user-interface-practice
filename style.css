@@ -86,7 +86,7 @@ nav {
   justify-content: space-evenly;
 }
 
-.control-buttons button {
+.btn-large {
   color: white;
   font-size: 24px;
 }
@@ -110,4 +110,15 @@ nav {
 
 .accordion-item {
   cursor: pointer;
+}
+
+/* Add a mushroom */
+
+input {
+  display: block;
+  padding: 10px;
+}
+
+#add-mushroom > button:active{
+  background-color:lightslategray;
 }

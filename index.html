@@ -18,6 +18,7 @@
       <a href="#slider">Slider</a>
       <a href="#edible-or-poisonous">Edible or poisonous</a>
       <a href="#more-info">More info</a>
+      <a href="#add-mushroom">Add mushroom</a>
     </div>
   </nav>
   <div class="content">
@@ -29,13 +30,13 @@
         <h3 class="name"></h3>
       </div>
       <div class="control-buttons">
-        <button class="left-button">←</button>
-        <button class="right-button">→</button>
+        <button class="btn-large" id="left-button">←</button>
+        <button class="btn-large" id="right-button">→</button>
       </div>
     </section>
 
     <section id="edible-or-poisonous">
-      <h2>Edible or poisonous</h2>
+      <h2>Edible or Poisonous</h2>
       
       <div class="lists">
         <div>
@@ -53,6 +54,16 @@
     <section id="more-info">
       <h2>More information</h2>
       <div class="accordion"></div>
+    </section>
+
+    <section id="add-mushroom">
+      <h2>Add a mushroom</h2>
+      <input id="name-input" type="text" placeholder="Name">
+      <input id="description-input" type="text" placeholder="Description">
+      <input id="image-input" type="text" placeholder="Image url">
+      <label for="edible-input">Is this mushroom edible?</label>
+      <input id="edible-input" type="checkbox">
+      <button class="btn-large" id="submit">Add</button>
     </section>
   </div>
 </body>
