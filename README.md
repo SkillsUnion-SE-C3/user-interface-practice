@@ -38,7 +38,7 @@ We would like to make five UI elements work with the help of Javascript, please 
 ![Example user interaction with accordion](examples/accordion.gif "Example interaction with accordion")
 
 5. Add a mushroom
-	- [How to see if a checkbox input has been checked]("https://www.w3schools.com/jsref/prop_checkbox_checked.asp")
+	- ![How to see if a checkbox input has been checked]("https://www.w3schools.com/jsref/prop_checkbox_checked.asp")
 	- When the user adds information about a mushroom and clicks submit 
 		we should add a new mushroom object to the mushrooms array. 
 		The new mushrooms should have name, description, image and edible properties. The edible property should be a boolean and the rest should be strings.
