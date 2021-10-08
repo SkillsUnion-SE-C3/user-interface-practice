@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javascript practice</title>
-  <script defer src="index.js"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <nav>
-    <button class="burger-menu">
-      <img src="images/menu.png">
-    </button>
-    <div class="expanded-nav">
-      <a href="#slider">Slider</a>
-      <a href="#edible-or-poisonous">Edible or poisonous</a>
-      <a href="#more-info">More info</a>
-      <a href="#add-mushroom">Add mushroom</a>
-    </div>
-  </nav>
-  <div class="content">
-    <h1>Mushrooms</h1>
-
-    <section id="slider">
-      <div class="slide">
-        <img class="image" src="" alt="">
-        <h3 class="name"></h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript practice</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <button class="burger-menu">
+        <img src="images/menu.png" />
+      </button>
+      <div class="expanded-nav">
+        <a href="#slider">Slider</a>
+        <a href="#edible-or-poisonous">Edible or poisonous</a>
+        <a href="#more-info">More info</a>
+        <a href="#add-mushroom">Add mushroom</a>
       </div>
-      <div class="control-buttons">
-        <button class="btn-large" id="left-button">←</button>
-        <button class="btn-large" id="right-button">→</button>
-      </div>
-    </section>
+    </nav>
+    <div class="content">
+      <h1>Mushrooms</h1>
 
-    <section id="edible-or-poisonous">
-      <h2>Edible or poisonous</h2>
-      
-      <div class="lists">
-        <div>
-          <h3>Edible</h3>
-          <ul id="edible">
-          </ul>
-        </div> 
-        <div>
-          <h3>Poisonous</h3>
-          <ul id="poisonous"></ul>
+      <section id="slider">
+        <div class="slide">
+          <img class="image" src="" alt="" />
+          <h3 class="name"></h3>
         </div>
-      </div>
-    </section>
+        <div class="control-buttons">
+          <button class="btn-large" id="left-button">←</button>
+          <button class="btn-large" id="right-button">→</button>
+        </div>
+      </section>
 
-    <section id="more-info">
-      <h2>More information</h2>
-      <div class="accordion"></div>
-    </section>
+      <section id="edible-or-poisonous">
+        <h2>Edible or poisonous</h2>
 
-    <section id="add-mushroom">
-      <h2>Add a mushroom</h2>
-      <input id="name-input" type="text" placeholder="Name">
-      <input id="description-input" type="text" placeholder="Description">
-      <input id="image-input" type="text" placeholder="Image url">
-      <label for="edible-input">Is this mushroom edible?</label>
-      <input id="edible-input" type="checkbox">
-      <button class="btn-large" id="submit">Add</button>
-    </section>
-  </div>
-</body>
+        <div class="lists">
+          <div>
+            <h3>Edible</h3>
+            <ul id="edible"></ul>
+          </div>
+          <div>
+            <h3>Poisonous</h3>
+            <ul id="poisonous"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="more-info">
+        <h2>More information</h2>
+        <div class="accordion"></div>
+      </section>
+
+      <section id="add-mushroom">
+        <h2>Add a mushroom</h2>
+        <input id="name-input" type="text" placeholder="Name" />
+        <input id="description-input" type="text" placeholder="Description" />
+        <input id="image-input" type="text" placeholder="Image url" />
+        <label for="edible-input">Is this mushroom edible?</label>
+        <input id="edible-input" type="checkbox" />
+        <button class="btn-large" id="submit">Add</button>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
